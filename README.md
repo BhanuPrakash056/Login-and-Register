@@ -17,16 +17,13 @@ Maven
 Getting Started
 Clone the repository:
 bash
-Copy code
 git clone https://github.com/your-username/login-api-backend.git
 Build the project using Maven:
 bash
-Copy code
 cd login-api-backend
 mvn clean install
 Run the application:
 bash
-Copy code
 mvn spring-boot:run
 The backend server will start running at http://localhost:8080.
 
@@ -39,38 +36,36 @@ URL: /auth/signup
 
 Method: POST
 
-Request Body:
 
-json
-Copy code
+
+'''json Request Body:
 {
   "username": "john_doe",
   "password": "password123"
 }
 Response:
 
-json
-Copy code
+'''json Copy code
+
 {
   "message": "User created successfully"
 }
-Login
+
+# Login
 URL: /auth/login
 
 Method: POST
 
-Request Body:
+# Request Body:
 
-json
-Copy code
+'''json
 {
   "username": "john_doe",
   "password": "password123"
 }
 Response:
 
-json
-Copy code
+'''json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
