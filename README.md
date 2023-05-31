@@ -31,44 +31,57 @@ The backend server will start running at http://localhost:8080.
 The application uses an H2 in-memory database, which is automatically created and populated with sample data when the application starts.
 
 # Endpoints
-# Signup
+ Signup
 URL: /auth/signup
 
 Method: POST
 
 
-
-'''json Request Body:
+```bash
 {
   "username": "john_doe",
   "password": "password123"
 }
+```
+
+
+```json
+{
+  "username": "john_doe",
+  "password": "password123"
+}
+```
 Response:
 
-'''json Copy code
+```json Copy code
 
 {
   "message": "User created successfully"
 }
+```
 
 # Login
-URL: /auth/login
+```url 
+/auth/login
+```
 
 Method: POST
 
 # Request Body:
 
-'''json
+```json
 {
   "username": "john_doe",
   "password": "password123"
 }
+```
 Response:
 
-'''json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
+```
 The login endpoint returns a JWT token that can be used for authentication in subsequent API requests.
 
 Configuration
